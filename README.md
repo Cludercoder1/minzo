@@ -7,7 +7,7 @@ A modern Flutter-based grocery delivery application with PHP backend, designed f
 ### Frontend (Flutter)
 - **Modern UI/UX**: Clean, responsive design with MinzoIT branding
 - **Video Banner**: Auto-playing promotional video (with fallback)
-- **Product Catalog**: Grid view of featured products with images
+- **Product Catalog**: Grid view with 200+ products across 10 categories
 - **Categories**: Horizontal scrolling category list
 - **Shopping Cart**: Local storage with quantity management
 - **Search**: Product search functionality
@@ -15,9 +15,19 @@ A modern Flutter-based grocery delivery application with PHP backend, designed f
 
 ### Backend (PHP + MySQL)
 - **RESTful APIs**: Clean API endpoints for data management
-- **Database**: MySQL with proper schema and relationships
+- **Database**: MySQL with 200+ products across 10 categories
+- **Admin Panel**: Complete CRUD operations for products and categories
 - **CORS Support**: Cross-origin requests enabled
-- **Sample Data**: Pre-populated categories and products
+- **Rich Data**: Pre-populated with diverse product catalog
+
+### Admin Panel Features
+- **Dashboard**: Statistics and recent products overview
+- **Product Management**: Add, edit, delete products with images
+- **Category Management**: Manage product categories
+- **Filtering & Search**: Advanced product filtering options
+- **Stock Management**: Track inventory levels
+- **Featured Products**: Mark products as featured
+- **Responsive Design**: Works on desktop and mobile
 
 ## 🛠️ Tech Stack
 
@@ -26,6 +36,7 @@ A modern Flutter-based grocery delivery application with PHP backend, designed f
 | Frontend | Flutter |
 | Backend | PHP (Core PHP) |
 | Database | MySQL |
+| Admin Panel | Bootstrap 5 + Vanilla JS |
 | Hosting | cPanel / Firebase |
 
 ## 📁 Project Structure
@@ -64,6 +75,12 @@ minzo/
 │   │   ├── config.php
 │   │   ├── categories.php
 │   │   ├── products.php
+│   │   ├── admin_*.php (Admin APIs)
+│   │   └── featured_products.php
+│   ├── admin/
+│   │   ├── index.php
+│   │   ├── login.php
+│   │   ├── admin.js
 │   │   └── featured_products.php
 │   └── database/
 │       └── schema.sql
@@ -115,6 +132,21 @@ minzo/
 3. Update database credentials in `backend/api/config.php`
 4. Upload backend files to your server
 5. Test API endpoints
+6. Access admin panel at `/backend/admin/`
+
+### Admin Panel Access
+**URL**: `your-domain.com/backend/admin/`
+
+**Default Credentials**:
+- Username: `admin`
+- Password: `admin123`
+
+### Admin Panel Features
+- **Dashboard** with product statistics
+- **Product Management** (Add/Edit/Delete)
+- **Category Management**
+- **Stock Monitoring**
+- **Featured Products Control**
 
 ## 📱 App Screens
 
@@ -144,6 +176,13 @@ minzo/
 | `/api/products.php` | GET | Get all products |
 | `/api/products.php?category_id=1` | GET | Get products by category |
 | `/api/featured_products.php` | GET | Get featured products |
+
+### Admin API Endpoints
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/admin_products.php` | GET | Get all products for admin |
+| `/api/admin_save_product.php` | POST | Create/update product |
+| `/api/admin_delete_product.php` | POST | Delete product |
 
 ## 🎯 Next Steps
 

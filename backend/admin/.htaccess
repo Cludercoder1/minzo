@@ -1,0 +1,14 @@
+# Protect admin directory
+AuthType Basic
+AuthName "MinzoIT Admin Area"
+AuthUserFile /path/to/.htpasswd
+Require valid-user
+
+# Alternative: Use PHP session-based authentication
+<Files "*.php">
+    # Allow access to login.php
+    <If "%{REQUEST_URI} =~ m#/login\.php$#">
+        Satisfy Any
+        Allow from all
+    </If>
+</Files>
