@@ -1,0 +1,13 @@
+# Assets Folder
+
+Place your images and videos here:
+
+## Images
+- logo.png (MinzoIT logo)
+- Product images
+- Category images
+
+## Videos  
+- promo.mp4 (Promotional video for banner)
+
+Note: The app will use placeholder images from Pexels if local assets are not found.
